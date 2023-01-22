@@ -5,23 +5,25 @@
     var todaysHour = moment().format("HH")
     console.log(todaysHour)
 
-    $('#currentDay').text(todaysDate + ', Hour: ' + todaysHour)
+
+    var dateFormat = $('#currentDay').text(todaysDate + ', Hour: ' + todaysHour)
 
 // 2. Colour code each block based on the current time
 //      Create variables to target each time block
-    var hour9am = $('#9am')
-    var hour10am = $('#10am')
-    var hour11am = $('#11am')
-    var hour12pm = $('#12pm')
-    var hour1pm = $('#1pm')
-    var hour2pm = $('#2pm')
-    var hour3pm = $('#3pm')
-    var hour4pm = $('#4pm')
-    var hour5pm = $('#5pm')
-    var hour6pm = $('#6pm')
+    var hour09 = $('#9am')
+    var hour10 = $('#10am')
+    var hour11 = $('#11am')
+    var hour12 = $('#12pm')
+    var hour13 = $('#1pm')
+    var hour14 = $('#2pm')
+    var hour15 = $('#3pm')
+    var hour16 = $('#4pm')
+    var hour17 = $('#5pm')
+    var hour18 = $('#6pm')
+
 //      In the html add the data-hour which represent which hour each element is
-    timeblocks = $('.description')
-    timeblocks.each(function() {
+    textArea = $('.description')
+    textArea.each(function() {
         hour = $(this).attr('data-hour');
         console.log(hour)
 
@@ -36,11 +38,21 @@
         }
     })
 
-
 // 3. Save input to local storage
 //      create variable (an array) called inputs that will store all of the input data
+    
+   var saveButton = $('.saveBtn')
+   var time = $('.hour')
+    console.log(time)
+
 //      Add event listener to all save button
-//          Add event.preventDefault inside the click event listener
+    saveButton.on('click', function(event){
+
+//      Add event.preventDefault inside the click event listener
+
+})
+
+  
 //          Push the input value to inputs array with the format of { time: xx, input: xxx }
 //              Get the input value
 //              Get the hour value
